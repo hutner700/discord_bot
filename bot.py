@@ -1,3 +1,5 @@
+from typing import Any
+
 import discord
 from discord.ext import commands
 import datetime
@@ -117,4 +119,6 @@ async def codigoFonte(ctx):
 
 
 if __name__ == '__main__':
-    client.run('ODc1NDU3NTMyNjgyOTY5MTY4.YRVzXQ.JzruOFllQlxUNdGMpFnGM-XRY8s')
+    with open('token.discord','r') as file:
+        token = file.readlines()[0]
+    client.run(token)
